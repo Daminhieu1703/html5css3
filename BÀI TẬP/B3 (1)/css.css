@@ -1,0 +1,26 @@
+section{
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 700px;
+}
+img{
+    width: 450px;
+    height: 500px;
+}
+.text{
+    position: absolute;
+    text-align: center;
+    opacity: -5;
+}
+section:hover .text{
+    opacity: 1;
+    animation: move 2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(200px,0,100px,0);
+}
+input{background-color: black; color: white;}
+@keyframes move {
+    from {bottom: 100px;}
+    to {bottom: 200px;}
+}

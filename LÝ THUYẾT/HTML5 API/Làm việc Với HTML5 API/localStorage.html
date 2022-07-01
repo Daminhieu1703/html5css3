@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let btnSetData = document.querySelector("#setData")
+            let btnGetData = document.querySelector("#getData")
+            let remove = document.querySelector("#removeData")
+            let result = document.querySelector("#result");
+
+            btnSetData.addEventListener("click", function(params) {
+                localStorage.setItem("họ và tên","Đàm Minh Hiếu")
+            })
+            btnGetData.addEventListener("click", function(params) {
+               console.log(localStorage.getItem("họ và tên"))
+               result.innerHTML = localStorage.getItem("họ và tên")
+            })
+            remove.addEventListener("click", function (params) {
+                localStorage.removeItem("họ và tên")
+                result.innerHTML = localStorage.removeItem("họ và tên")
+            })
+        }
+    </script>
+</head>
+<body>
+    <button id="setData">Set Data</button>
+    <button id="getData">Get Data</button>
+    <button id="removeData">Remove Data</button>
+    <p id="result"></p>
+    <script>
+        //kiểm tra xem trình duyệt có hỗ trợ Local Storage hay không
+        if (typeof(Storage) !=="undefined") {
+           localStorage.setItem("website","example.com") //lưu trữ
+           document.getElementById("result").innerHTML = localStorage.getItem("website") //lấy dữ liệu
+        } else {
+            document.getElementById("result").innerHTML = `trình duyệt của bạn không hỗ trợ`
+        }
+        localStorage.removeItem("website") // cú pháp xóa website trong local storage
+    </script>
+</body>
+</html>

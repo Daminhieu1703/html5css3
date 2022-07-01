@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- CHIA SẺ VỊ TRÍ -->
+    <h1>nhấn vào nút dưới đây để lấy tọa độ của bạn</h1>
+    <button onclick="getlocation()">ĐỊNH VỊ</button>
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById("demo");
+        function getlocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition,showError); //xác định vị trí người dùng bạn dùng getCurrentPosition()
+            } else {
+                x.innerHTML="trình duyệt của bạn không hỗ trợ Geolocation"
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = `kinh độ: ${position.coords.latitude} vĩ độ: ${position.coords.longitude}`
+        }
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    X.innerHTML = "người dùng từ chối quyền truy cập"
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "không có thông tin vị trí"
+                    break;
+                case error.TIMEOUT:
+                    x,innerHTML = "hết thời gian gửi yêu cầu định vị"
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "lỗi chưa xác dịnh"
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

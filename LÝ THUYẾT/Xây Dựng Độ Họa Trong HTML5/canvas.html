@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Giới thiệu về canvas</h3>
+    <canvas id="MyCanvas" width="500px" height="300px" style="border: 1px solid #000;">
+        <p>Trình duyệt của bạn không hỗ trợ HTML5 Canvas.</p>
+    </canvas>
+    <script>
+        var canvas = document.getElementById("MyCanvas");
+        context = canvas.getContext("2d");
+        context.fillStyle = "green";
+        context.fillRect(20,20,100,100) // fillRect(margin left,margin top,chiều ngang,chiều cao)
+        context.strokeStyle = "rgba(0,0,255,1)"; //màu
+        context.lineWidth = 10; //độ dày của đường line
+        context.strokeRect(20,20,100,100); // strokeRect(margin left,margin top,chiều ngang đường line,chiều cao đường line)
+    </script>
+</body>
+</html>

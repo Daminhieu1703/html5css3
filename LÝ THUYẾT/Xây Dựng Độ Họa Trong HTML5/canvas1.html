@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Giới thiệu về canvas</h3>
+    <canvas id="MyCanvas" width="500px" height="200px" style="border: 1px solid #000;">
+        <p>Trình duyệt của bạn không hỗ trợ HTML5 Canvas.</p>
+    </canvas>
+    <script>
+         var canvas = document.getElementById("MyCanvas");
+        context = canvas.getContext("2d");
+        context.moveTo(0,0) //toạ độ
+        context.lineTo(500,200) //xác định điểm kết thúc của đường line
+        context.stroke() //hiện ra đường line
+    </script>
+</body>
+</html>

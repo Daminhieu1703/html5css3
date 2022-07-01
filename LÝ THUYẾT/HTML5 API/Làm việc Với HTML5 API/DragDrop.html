@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 350px;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+    <p>kéo thả logo vào hình chữ nhật</p>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <!-- sự kiện ondragover quy định khu vực nào dữ liệu đc phép thả xuống và cho phép nhận giá trị -->
+    <img id="drag1" src="picture/logo.jpg" draggable="true" ondragstart="drag(event)" width="350px" height="70px"> 
+    <!-- thiết lập phần tử có thể kéo được bằng cách thiết lập thuộc tính draggable="true"  -->
+    <!-- thuôc tính ondragstart gọi tới 1 hàm là drag(event) và hàm drag(event) này có quy định dữ liệu gì được kéo đi -->
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault(); //phương thức preventDefault() giúp chúng ta có thể kéo thả vào thành phần khác của trang
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text",ev.target.id); //dataTransfer.setData() cho phép chúng ta đặt kiểu dữ liệu và giá trị của thẻ kéo theo
+            // trong trường hợp này kiểu dữ liệu là "text" và giá trị là id của thẻ ("drag1")
+        } 
+        function drop(ev) {
+            ev.preventDefault(); //phương thức preventDefault() để thay đổi mặc định của trình duyệt đối với dữ liệu 
+            var data = ev.dataTransfer.getData("text"); //dataTransfer.getData() có tác dụng lấy dữ liệu vừa đc thả xuống,phương thức này trả vể kiểu dữ liệu của setData()
+            ev.target.appendChild(document.getElementById(data)); //target là phần tử kích hoạt sự kiện
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 200px;height: 200px;
+        background-color: cadetblue;
+        position: relative;
+        animation: move;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        direction: inherit;
+    }
+    @keyframes move {
+        0% { background:cadetblue;left: 0;top: 0;}
+        25% { background:brown;left: 200px;top: 0;}
+        50% { background:green;left: 200px;top: 200px;}
+        75% { background:pink;left: 0;top: 200px;}
+        100%  { background:cadetblue;left: 0;top: 0;}
+    }
+</style>
+<body>
+    <div class="box">
+        Hello world
+    </div>
+</body>
+</html>

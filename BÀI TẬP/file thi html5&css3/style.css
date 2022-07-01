@@ -1,0 +1,184 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.frames{
+    width: 1200px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    padding: 0 10px 0 10px;
+}
+@font-face {
+    font-family: pe;
+    src: url(UTM\ Penumbra.ttf);
+}
+body{
+    background-color: #c2c2c2;
+}
+header .banner img{
+    width: 1180px;
+}
+header .banner{
+    width: 1180px;
+    overflow: hidden;
+    position: relative;
+    height: 530px;
+}
+header .banner:hover > img{
+    width: 1300px;
+}
+header .logo{
+    text-align: center;
+    padding-top: 20px;
+}
+header .menu nav ul{
+    text-align: center;
+    padding-top: 10px;
+}
+header .menu nav ul li{
+    display: inline-block;
+    padding: 0 20px 0 20px;
+}
+header .menu nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+header .menu nav ul li a:hover{
+    text-decoration: underline;
+}
+main .main-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 30px;
+}
+main .main-top .text{
+    padding: 250px 30px 0 0;
+}
+main .main-top .text h1{
+    font-size: 40px;
+}
+main .main-top .text h1,p{
+    padding-bottom: 20px;
+}
+main .main-top .text input[type="button"]{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #ffa800;
+    color: white;
+    border: none;
+}
+main .main-top .text input[type="button"]:hover{
+    background-color: black;
+    color: white;
+}
+main figure h1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+    font-family: pe;
+}
+main figure .news article{
+    width: 370px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 35px;
+}
+main figure .news article img{
+    width: 370px;
+    height: 450px;
+}
+main figure .news article .text{
+    position: absolute;
+    bottom: -120px;
+    transition: all 2s ease-in-out;
+    width: 370px;
+    height: 120px;
+    background-color: white;
+    opacity: 0.6;
+    text-align: center;
+}
+main figure .news article .text h3{
+    padding: 10px 0 10px 0;
+    
+}
+main figure .news article:hover > .text{
+    bottom: 0;
+    opacity: 1.6;
+}
+main figure .news .news1:hover > img{
+    content: url(image/img/trip2.jpg);
+}
+main figure .news .news2:hover > img{
+    content: url(image/img/trip3.jpg);
+}
+main figure .news .news3:hover > img{
+    content: url(image/img/trip1.jpg);
+}
+main figure .news article .text input[type="button"]{
+    width: 370px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+main figure .news article .text input[type="button"]:hover{
+    background-color: #ffa800;
+}
+main figure .news{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 0 30px 0;
+}
+footer{
+    height: 80px;
+    background-color: #021a34;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+footer p{
+    color: white;
+    line-height: 80px;
+    padding-left: 20px;
+}
+footer form{
+    line-height: 80px;
+    padding-left: 180px;
+}
+footer form input[type="email"]{
+    height: 44px;
+    width: 300px;
+    outline: none;
+    background-color: #021a34;
+    border: 1px solid #ffa800;
+    color: white;
+    padding-left: 5px;
+}
+footer form button:hover{
+    outline: none;
+    background-color: white;
+    color: black;
+}
+::placeholder{
+    color: white;
+}
+footer form button{
+    height: 44px;
+    width: 70px;
+    outline: none;
+    background-color: #ffa800;
+    border: none;
+    color: white;
+    padding-left: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+main .main-top .img{
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+    height: 800px;
+}
+main .main-top .img:hover > img{
+    width: 800px;   
+}

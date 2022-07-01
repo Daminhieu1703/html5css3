@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .menu{margin: 50px auto;height: 50px;width: 800px;background-color: brown;}
+        nav ul{list-style: none;}
+        nav>ul>li{display: inline-block;}
+        nav>ul>li>a{display: block; line-height: 50px; padding: 0 30px 0 30px;transition: all 0.5s;}
+        nav ul li{position: relative;}
+        nav ul li a{color: white;text-decoration: none;}
+        /* hover */
+        nav ul ul{width: 200px;background-color: crimson;position: absolute;top: 150%;left: 0;visibility: hidden;opacity: 0;transition: all 0.5s;z-index: 999;}
+        nav ul li:hover > ul{visibility: visible;opacity: 1;top: 100%;}
+        nav ul ul li{line-height:40px;text-align: center;}
+        nav ul ul li:hover{background-color: black;}
+        nav ul ul li a{display: block;}
+        nav ul li a:hover{background-color: black;}
+        nav ul ul ul{top: 0 !important;left: 100%;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="menu">
+            <nav>
+                <ul>
+                    <li><a href="">Gucci</a></li>
+                    <li><a href="">Louis Vuitton</a>
+                        <ul>
+                            <li><a href="">bộ sưu tập mới nhất</a>
+                                <ul>
+                                    <li><a href="">bộ sưu tập mới nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a>
+                                        <ul>
+                                            <li><a href="">bộ sưu tập mới nhất</a></li>
+                                            <li><a href="">cũ nhất</a></li>
+                                            <li><a href="">cũ nhất</a></li>
+                                            <li><a href="">cũ nhất</a></li>
+                                            <li><a href="">cũ nhất</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="">cũ nhất</a>
+                                <ul>
+                                    <li><a href="">bộ sưu tập mới nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                    <li><a href="">cũ nhất</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">cũ nhất</a></li>
+                            <li><a href="">cũ nhất</a></li>
+                            <li><a href="">cũ nhất</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Hermest</a></li>
+                    <li><a href="">Versace</a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</body>
+</html>

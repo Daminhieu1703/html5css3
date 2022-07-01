@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><button onclick="clickCounter()" type="button">Click Me !</button></p>
+    <div id="result"></div>
+    <p>nhấn vào nút để xem tăng bộ đếm</p>
+    <p>Đóng tab trình duyệt (hoặc cửa sổ) và thử lại và bộ đếm sẽ được đặt lại.</p>
+    <script>
+        function clickCounter(params) {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML ="bạn đã nhấn vào nút " + sessionStorage.clickcount + " time(s) trong phiên này";
+            } else {
+                document.getElementById("result").innerHTML = "xin lỗi,trình duyệt của bạn không hỗ trợ web storage"
+            }
+        }
+    </script>
+</body>
+</html>
